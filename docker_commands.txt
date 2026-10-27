@@ -1,0 +1,21 @@
+docker build -t <foldername> .
+docker run --rm --init <foldername> node <filename.fileextension>
+
+
+ what is the command to stop a dockercontainer
+
+Run this from your host terminal:
+
+docker stop <container>
+
+Replace <container> with the container's name or ID. To find it, run docker ps, which lists the containers that are running.
+
+Other commands you might need:
+- docker kill <container> stops it immediately, without waiting for it to shut down cleanly.
+- docker stop $(docker ps -q) stops every running container.
+- docker rm <container> deletes a container after it's stopped. docker rm -f <container> stops and deletes it in one step.
+
+
+
+command to exit docker container
+exit
